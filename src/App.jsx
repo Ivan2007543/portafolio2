@@ -6,6 +6,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import SpaProject from './components/SpaProject';
 import Contact from './components/Contact';
+import SoftSkills from './components/SoftSkills';
 
 function App() {
   return (
@@ -17,9 +18,10 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Skills />
+        <SoftSkills />
         <Projects />
         <SpaProject />
-         <Skills />
         <Contact />
          
       </main>
