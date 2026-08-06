@@ -1,42 +1,50 @@
-import React from 'react';
+const interests = [
+  {
+    title: 'Desarrollo web',
+    text: 'Me interesa construir interfaces útiles, accesibles y fáciles de mantener con tecnologías modernas.',
+  },
+  {
+    title: 'Bases de datos',
+    text: 'Quiero profundizar en el diseño, modelado y administración de bases de datos relacionales y no relacionales.',
+  },
+  {
+    title: 'Videojuegos',
+    text: 'Me gustaría explorar la programación de videojuegos, sus motores, mecánicas y lógica interactiva.',
+  },
+  {
+    title: 'Aprendizaje continuo',
+    text: 'Busco conocer nuevas herramientas y buenas prácticas para mejorar la calidad de cada proyecto.',
+  },
+];
 
 export default function About() {
   return (
-    <section id="sobre-mi" className="py-20 bg-slate-900 text-slate-100">
-      <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold border-b border-slate-800 pb-4 mb-8 text-sky-400">Sobre Mí</h2>
-        
-        {/* Contenedor en dos columnas */}
-        <div className="grid md:grid-cols-2 gap-8">
-          
-          {/* Bloque 1: Intereses Profesionales */}
-          <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-            <div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Intereses Profesionales</h3>
-              <p className="text-slate-400 text-sm leading-relaxed text-justify">
-                A lo largo de la carrera he logrado desarrollar habilidades en áreas como el desarrollo web. 
-                He aprendido a utilizar Visual Studio Code, HTML y CSS para páginas web básicas, así como 
-                JavaScript y React; tecnologías que me ayudan a generar aplicaciones web y móviles complejas 
-                de manera más eficiente. A su vez, me entusiasma trabajar con la metodología Scrum, buscando 
-                siempre adaptarme y mejorar en cada iteración.
-              </p>
-            </div>
+    <section id="sobre-mi" className="section section-alt">
+      <div className="container about-grid">
+        <div>
+          <p className="eyebrow">01 / Perfil</p>
+          <h2 className="section-title">Curiosidad técnica con enfoque práctico.</h2>
+          <div className="about-copy">
+            <p>
+              Soy estudiante de Ingeniería de Software y Sistemas Computacionales, con interés especial
+              en el desarrollo web y en comprender cómo se construyen productos digitales desde la idea
+              inicial hasta una solución funcional.
+            </p>
+            <p>
+              Disfruto trabajar en equipo, recibir retroalimentación y aprender durante el proceso. Mi
+              meta es crecer como desarrollador, fortalecer mis fundamentos y aportar soluciones claras,
+              responsables y bien pensadas.
+            </p>
           </div>
-          
-          {/* Bloque 2: Áreas de Aprendizaje */}
-          <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-            <div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Áreas de Aprendizaje</h3>
-              <p className="text-slate-400 text-sm leading-relaxed text-justify">
-                Algunas de las áreas en las que me gustaría seguir aprendiendo y creciendo profesionalmente 
-                incluyen el dominio y diseño avanzado de bases de datos relacionales y no relacionales, la 
-                implementación de arquitecturas de software limpias y la exploración de nuevas herramientas 
-                en tendencia que optimicen mi forma de desarrollar aplicaciones web y moviles. Estoy comprometido 
-                con la mejora continua y la adquisición de conocimientos que me permitan dar soluciones más efectivas en el desarrollo de software.
-              </p>
-            </div>
-          </div>
-
+        </div>
+        <div className="interest-grid">
+          {interests.map((interest, index) => (
+            <article className="info-card" key={interest.title}>
+              <span className="card-number">0{index + 1}</span>
+              <h3>{interest.title}</h3>
+              <p>{interest.text}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

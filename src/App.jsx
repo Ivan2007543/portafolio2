@@ -1,4 +1,3 @@
-import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -6,27 +5,26 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import SpaProject from './components/SpaProject';
 import Contact from './components/Contact';
-import SoftSkills from './components/SoftSkills';
+import './App.css';
 
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-slate-950 font-sans antialiased selection:bg-sky-500/30 selection:text-sky-300">
-      {/* Barra de navegación común */}
+    <div className="portfolio">
       <Navbar />
-      
-      {/* Secciones organizadas secuencialmente */}
       <main>
         <Hero />
         <About />
         <Skills />
-        <SoftSkills />
         <Projects />
         <SpaProject />
         <Contact />
-         
       </main>
+      <footer className="footer">
+        <div className="container footer-inner">
+          <span>© 2026 Iván Alejandro Silveira Muñoz</span>
+          <span>Diseñado y desarrollado con atención al detalle.</span>
+        </div>
+      </footer>
     </div>
   );
 }
-
-export default App;

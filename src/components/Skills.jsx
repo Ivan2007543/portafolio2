@@ -1,36 +1,36 @@
-import React from 'react';
+const technicalSkills = [
+  'HTML5', 'CSS3', 'JavaScript', 'React', 'React Native', 'Tailwind CSS',
+  'Bootstrap', 'Node.js', 'Express', 'PostgreSQL', 'Git y GitHub', 'Visual Studio Code',
+];
+
+const softSkills = [
+  'Aprendizaje autodidacta', 'Trabajo en equipo', 'Adaptabilidad',
+  'Comunicación efectiva', 'Pensamiento analítico', 'Responsabilidad',
+];
 
 export default function Skills() {
-  // Quitamos los corchetes para que el texto luzca más limpio y profesional
-  const habilidades = [
-    "Visual Studio Code",   
-    "React Native",
-    "Tailwind CSS",
-    "GitHub",
-    "Gemini",
-    "Bootstrap",
-    "JavaScript",
-    "HTML",
-    "CSS",
-  ];
-
   return (
-    <section id="habilidades" className="py-20 bg-slate-950 text-slate-100">
-      <div className="max-w-4xl mx-auto px-4 text-center"> {/* Agregado text-center aquí */}
-        <h2 className="text-3xl font-bold border-b border-slate-800 pb-4 mb-10 text-sky-400 inline-block px-6">
-          Habilidades Técnicas
-        </h2>
-        
-        {/* Cambiado a justify-center para equilibrar las tarjetas en cualquier pantalla */}
-        <div className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
-          {habilidades.map((skill, index) => (
-            <span 
-              key={index} 
-              className="px-5 py-2.5 bg-slate-900 border border-slate-800 rounded-xl text-sm font-medium text-slate-300 shadow-md transition-all duration-300 hover:border-sky-500/50 hover:text-sky-400 hover:scale-105"
-            >
-              {skill}
-            </span>
-          ))}
+    <section id="habilidades" className="section">
+      <div className="container">
+        <p className="eyebrow">02 / Capacidades</p>
+        <h2 className="section-title">Herramientas que uso y habilidades que cultivo.</h2>
+        <p className="section-intro">
+          Una base técnica en crecimiento, acompañada de habilidades humanas que me permiten aprender,
+          colaborar y adaptarme a los retos de cada proyecto.
+        </p>
+        <div className="skills-layout">
+          <div className="skill-block">
+            <h3>Habilidades técnicas</h3>
+            <div className="tag-list">
+              {technicalSkills.map((skill) => <span className="tag" key={skill}>{skill}</span>)}
+            </div>
+          </div>
+          <div className="skill-block">
+            <h3>Habilidades profesionales</h3>
+            <div className="tag-list">
+              {softSkills.map((skill) => <span className="tag tag-accent" key={skill}>{skill}</span>)}
+            </div>
+          </div>
         </div>
       </div>
     </section>

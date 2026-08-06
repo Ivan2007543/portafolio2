@@ -1,25 +1,34 @@
-import React from 'react';
-
 export default function Hero() {
   return (
-    <section id="inicio" className="pt-32 pb-20 md:py-32 bg-slate-950 text-slate-100 flex items-center">
-      <div className="max-w-4xl mx-auto px-4 text-center">
-        {/* Nombre limpio sin comillas */}
-        <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4">
-          Ivan Alejandro Silveira Muñoz
-        </h1>
-        
-        {/* Perfil limpio sin corchetes */}
-        <p className="text-xl md:text-2xl font-medium text-sky-400 mb-6">
-          Ingeniería de software y sistemas computacionales
-        </p>
-        
-        {/* Descripción limpia sin corchetes */}
-        <p className="text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto">
-          Soy un estudiante de Ingeniería de Software interesado por el desarrollo web full-stack 
-          , me gusta aprender nuevas técnicas para mejorar mis habilidades y participar en proyectos interesantes e inovadores. 
-          Mi objetivo es crecer profesionalmente y dar lo mejor de mi en cada proyecto en el que participe.
-        </p>
+    <section id="inicio" className="hero-section">
+      <div className="container hero-grid">
+        <div>
+          <span className="availability">Disponible para nuevos proyectos</span>
+          <h1 className="hero-title">
+            Iván Alejandro
+            <span>Silveira Muñoz</span>
+          </h1>
+          <p className="hero-role">Estudiante de Ingeniería de Software y Sistemas Computacionales</p>
+          <p className="hero-copy">
+            Desarrollo experiencias web claras y funcionales mientras fortalezco mis conocimientos en
+            programación. Me motiva aprender nuevas tecnologías y convertir cada proyecto en una
+            oportunidad para crear soluciones cada vez más completas.
+          </p>
+          <div className="hero-actions">
+            <a className="button button-primary" href="#proyectos">Ver mis proyectos</a>
+            <a className="button" href="#contacto">Hablemos</a>
+          </div>
+        </div>
+
+        <div className="photo-shell" aria-label="Espacio reservado para fotografía de perfil">
+          <div className="photo-placeholder">
+            <div className="photo-content">
+              <div className="photo-icon" aria-hidden="true">◎</div>
+              <strong>Tu fotografía aquí</strong>
+              <span>Reemplaza este espacio con tu imagen</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
