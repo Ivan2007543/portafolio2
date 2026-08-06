@@ -1,3 +1,5 @@
+import profilePhoto from '../assets/perfil.png'
+
 export default function Hero() {
   return (
     <section id="inicio" className="hero-section">
@@ -20,13 +22,13 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="photo-shell" aria-label="Espacio reservado para fotografía de perfil">
+        <div className="photo-shell">
           <div className="photo-placeholder">
-            <div className="photo-content">
-              <div className="photo-icon" aria-hidden="true">◎</div>
-              <strong>Tu fotografía aquí</strong>
-              <span>Reemplaza este espacio con tu imagen</span>
-            </div>
+            <img
+              className="profile-photo"
+              src={profilePhoto}
+              alt="Retrato profesional de Iván Alejandro Silveira Muñoz"
+            />
           </div>
         </div>
       </div>
